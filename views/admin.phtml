@@ -1,0 +1,227 @@
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+    <!-- Header
+    ============================================= -->
+    <?php echo AOAdmin::view( 'header' ); ?>
+    <!-- #header end -->
+
+    <!-- Page Title
+    ============================================= -->
+    <section id="page-title">
+        <div class="row">
+            <div class="col-md-6 offset-1">
+                <div class="row">
+                    <div class="col-3">
+                        <img id="ao-dash-profile-image" class="flex-img"
+                             src="<?php echo plugins_url( 'ao-admin/assets/images/pattern2.png'); ?>"
+                             data-default-image-src="<?php echo plugins_url( 'ao-admin/assets/images/pattern2.png'); ?>"
+                        />
+                    </div>
+                    <div class="col-9">
+                        <h1 id="header-stage-name" style="margin-top: 1.5em;">&nbsp;</h1>
+                        <span ><?php echo $_SERVER['HTTP_HOST']; ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container" style="margin-top: 5em;">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="<?php echo admin_url(); ?>">WP Admin</a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo AOAdmin::get_admin_page_url( '3ao-dashboard' ); ?>">3AO Admin</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- #page-title end -->
+
+    <!-- Content
+    ============================================= -->
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+
+                <div id="side-navigation" class="row" data-plugin="tabs">
+
+                    <div class="col-md-3">
+                        <ul class="sidenav">
+                            <li><a href="#snav-profile"><i class="icon-user"></i>Profile<i class="icon-chevron-right"></i></a></li>
+                            <li><a href="#snav-size-card"><i class="icon-measure"></i>Size Card<i class="icon-chevron-right"></i></a></li>
+                            <li><a href="#snav-resume"><i class="icon-award"></i>Resumé<i class="icon-chevron-right"></i></a></li>
+                            <li><a href="#snav-images"><i class="icon-image"></i>Images<i class="icon-chevron-right"></i></a></li>
+                            <li><a href="#snav-media"><i class="icon-video"></i>Media<i class="icon-chevron-right"></i></a></li>
+                            <li><a href="#snav-themes"><i class="icon-picture"></i>Themes<i class="icon-chevron-right"></i></a></li>
+                            <li><a href="#snav-account"><i class="icon-credit-card1"></i>Account<i class="icon-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-9">
+
+                        <div id="snav-profile">
+                            <?php echo AOAdmin::view('profile'); ?>
+                        </div>
+
+                        <div id="snav-size-card">
+                            <?php echo AOAdmin::view('size_card'); ?>
+                        </div>
+
+                        <div id="snav-resume">
+                            <?php echo AOAdmin::view('documents'); ?>
+                        </div>
+
+                        <div id="snav-images">
+                            <?php echo AOAdmin::view('images'); ?>
+                        </div>
+
+                        <div id="snav-media">
+                            <?php echo AOAdmin::view('media'); ?>
+                        </div>
+
+                        <div id="snav-themes">
+                            <h3>Themes</h3>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, temporibus, maxime, laudantium quidem sapiente deserunt error rerum illum explicabo voluptate velit tempora cupiditate reprehenderit consequuntur nemo in et blanditiis soluta tempore perspiciatis at atque excepturi culpa facere sequi impedit cumque illo molestias saepe eveniet ducimus fugiat reiciendis unde. Modi, at laboriosam ex velit commodi officiis! Neque, consequatur, modi, nulla, voluptatem quibusdam incidunt minus dolores repellat nihil consectetur ducimus aliquid. Eaque, tempora voluptatum accusantium expedita obcaecati magnam voluptates consequatur ut harum rem dolor id error. Officia, repudiandae, eos, quibusdam porro eius esse cupiditate non fugit dignissimos delectus et tempora sequi fugiat quo voluptatem temporibus vel obcaecati? Laboriosam, quis obcaecati quas veniam repellendus officiis et quos velit id natus mollitia dacilis ipsum et perspiciatis officia iste cupiditate ducimus nisi consequuntur excepturi dolorum. Sint, architecto, cumque facere officia harum dicta perferendis inventore excepturi sequi explicabo provident omnis dolore quasi fugit molestiae atque id consectetur reprehenderit laborum beatae consequatur similique.
+                        </div>
+
+                        <div id="snav-account">
+                            <h3>Account</h3>
+                            Dolor aperiam modi aliquam dolores consequatur error commodi ad eius incidunt! Libero, odio incidunt ullam sunt fugiat? Laboriosam, perferendis, debitis, harum soluta iste eos sunt odit architecto porro eveniet sint optio nihil animi. Laudantium, quam, culpa, velit molestias exercitationem reprehenderit enim distinctio aliquam aut ex numquam sequi assumenda veritatis fuga voluptatum. Magni, voluptates adipisci unde sapiente eligendi ea maxime tempora pariatur ipsa.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, aspernatur, saepe, quidem animi hic rem libero earum fuga voluptas culpa iure qui accusantium ab quae dolorum laborum quia repellat fugit aut minima molestias placeat mollitia doloribus quibusdam consectetur officia nesciunt ad. Ab, quod ipsum commodi assumenda doloribus possimus sed laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section><!-- #content end -->
+
+    <input type="hidden" id="metadata"
+       data-server-maxfilesize="<?php echo wp_max_upload_size(); ?>"
+       data-plugins-base-url="<?php echo plugins_url( ''); ?>"
+       data-ao-images-url="<?php echo plugins_url( 'ao-admin/assets/images/'); ?>"
+    />
+
+    <!-- Footer
+    ============================================= -->
+    <?php AOAdmin::view( 'footer' ); ?>
+    <!-- #footer end -->
+
+</div><!-- #wrapper end -->
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- Edit Media Modal -->
+<div class="modal fade" id="mediaEditModal" tabindex="-1" role="dialog" aria-labelledby="mediaEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Edit Media Description</h5>
+            </div>
+            <div class="modal-body">
+                <div id="edit-media-modal-messages" class="mb-1"></div>
+                <div class="row">
+                    <div class="col-8">
+
+                        <div class="attachment-info">
+
+                            <div class="image-details">
+                                <div><strong>Upload Date:</strong><span class="uploaded"></span></div>
+                                <div><strong>File Name:</strong><span class="filename"></span></div>
+                                <div><strong>File Type:</strong><span class="file-type"></span></div>
+                                <div><strong>File Size:</strong><span class="file-size"></span></div>
+                                <div class="image-dimensions"><strong>Dimensions:</strong><span class="dimensions"></span></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <img id="edit-media-thumbnail" src="<?php echo plugins_url( 'ao-admin/assets/images/pattern.png'); ?>" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="" />
+                        <form id="AOFormMedia" name="AOFormMedia" class="" data-service="AOServiceMedia">
+
+                            <!-- This is the post ID !-->
+                            <input type="hidden" id="media_id" name="media_id" class="hide">
+
+                            <div class="form-group">
+                                <label for="media_categories">Categories</label>
+                                <input type="text" id="media_categories" name="media_categories" class="form-control form-control-lg" />
+                                <div class="message-container"></div>
+                            </div>
+
+                            <!--  -->
+                            <div class="form-group">
+                                <label for="media_alt_text">Alternative Text</label>
+                                <input type="text" id="media_alt_text" name="media_alt_text" class="form-control form-control-lg">
+                                <div class="message-container"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="media_title">Title</label>
+                                <input type="text" id="media_title" name="media_title" class="form-control form-control-lg">
+                                <div class="message-container"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="media_caption">Caption</label>
+                                <textarea id="media_caption" name="media_caption" class="form-control form-control-lg"></textarea>
+                                <div class="message-container"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="media_description">Description</label>
+                                <textarea id="media_description" name="media_description" class="form-control form-control-lg"></textarea>
+                                <div class="message-container"></div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="edit-media-modal-close" type="button" class="btn btn-secondary pull-left">Close</button>
+                <button id="edit-media-modal-save" type="button" class="btn theme-background"><i class="icon-check"></i> Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Edit Media Modal -->
+
+<!-- Delete Media Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Media</h5>
+            </div>
+            <div class="modal-body">
+                <div id="delete-media-modal-messages" class="mb-1"></div>
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="mb-1"><i class="icon-warning-sign red"></i></i> Permanently Delete Media?</h4>
+                        <p>This action cannot be undone!</p>
+                    </div>
+                    <div class="col-4">
+                        <img id="delete-media-confirm-thumbnail" src="<?php echo plugins_url( 'ao-admin/assets/images/pattern.png'); ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="delete-media-modal-close" type="button" class="btn btn-secondary pull-left">Close</button>
+                <button id="delete-media-modal-delete" type="button" class="btn btn-danger" data-media-id="">
+                    <i class="icon-trash"></i> Delete Media
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Delete Media Confirmation Modal -->

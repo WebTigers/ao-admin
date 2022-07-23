@@ -1,0 +1,14 @@
+<form action="<?php the_permalink(); ?>" method="post" class="sign-in">
+    <div class="form-group">
+        <label for="user-name"><?php _e('Username'); ?></label><br />
+        <input type="text" name="user-name" id="user-name" class="form-control" value="<?php echo esc_html( $_POST['user-name'], 1 ); ?>" />
+    </div>
+    <div class="form-group">
+        <label for="password"><?php _e('Password'); ?></label><br />
+        <input type="password" name="password" id="password" />
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit" class="btn btn-primary" value="<?php _e('Log in'); ?>" id="" />
+        <input type="hidden" name="action" value="log-in" />
+    </div>
+</form>
